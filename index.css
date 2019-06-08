@@ -3,23 +3,24 @@ body {
 }
 
 .container {
-  font-family: "Montserrat", sans-serif;
   position: fixed;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* text */
+
 .text {
+  font-family: "Montserrat", sans-serif;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .color {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   mix-blend-mode: multiply;
   font-size: 256px;
 }
@@ -37,4 +38,11 @@ body {
 .yellow {
   color: #fef100;
   transform: translate(calc(-48%), calc(-48%));
+}
+
+/* tools */
+
+.tools {
+  position: absolute;
+  bottom: 0;
 }
