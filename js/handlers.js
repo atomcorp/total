@@ -41,22 +41,13 @@ export const initText = () => {
 };
 
 const colorsModule = () => {
-  let dimensions = {};
   const cyan = getCss(".cyan");
   const magenta = getCss(".magenta");
   const yellow = getCss(".yellow");
-  const resetDimensions = totals => {
-    totals.forEach(total => {
-      dimensions[total.dataset.color] = total.getBoundingClientRect();
-    });
-    return dimensions;
-  };
   return {
     cyan,
     magenta,
-    yellow,
-    dimensions,
-    resetDimensions
+    yellow
   };
 };
 
@@ -67,7 +58,6 @@ export const initMotion = () => {
   const containerDimensions = container.getBoundingClientRect();
   // add event listener for each total
   container.addEventListener("mousemove", e => {
-    const colorName = "cyan";
     const x = (
       (e.clientX - containerDimensions.left) /
       containerDimensions.width
@@ -80,7 +70,7 @@ export const initMotion = () => {
       48}%)`;
     colours["magenta"].style.transform = `translate(-${48 + x * 4}%, -${52 -
       y * 4}%)`;
-    colours["yellow"].style.transform = `translate(-${46 + x * 4}%, -${46 -
+    colours["yellow"].style.transform = `translate(-${46 + x * 4}%, -${48 +
       y * 8}%)`;
   });
 };
