@@ -55,10 +55,17 @@ body {
 
 .size {
   padding: 20px;
+  position: relative;
 }
 
 .input {
   padding: 20px;
+}
+
+input {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border: 0;
 }
 
 .credit {
@@ -68,4 +75,12 @@ body {
 .credit a {
   color: black;
   text-decoration: none;
+}
+
+.resize {
+  content: "RESIZE";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
