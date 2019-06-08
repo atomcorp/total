@@ -26,15 +26,15 @@ body {
 
 .cyan {
   color: #00adee;
-  transform: translate(calc(-20px - 50%), calc(20px - 50%));
+  transform: translate(calc(-51%), calc(-46%));
 }
 
 .magenta {
   color: #ec008c;
-  transform: translate(calc(-50%), calc(-20px - 50%));
+  transform: translate(calc(-50%), calc(-52%));
 }
 
 .yellow {
   color: #fef100;
-  transform: translate(calc(20px - 50%), calc(12px - 50%));
+  transform: translate(calc(-48%), calc(-48%));
 }
