@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.container {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  position: relative;
+}
+
+.color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  font-size: 256px;
+}
+
+.cyan {
+  color: #00adee;
+  transform: translate(calc(-20px - 50%), calc(20px - 50%));
+}
+
+.magenta {
+  color: #ec008c;
+  transform: translate(calc(-50%), calc(-20px - 50%));
+}
+
+.yellow {
+  color: #fef100;
+  transform: translate(calc(20px - 50%), calc(12px - 50%));
+}
