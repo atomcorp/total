@@ -76,11 +76,11 @@ export const initMotion = () => {
       (e.clientY - dimensions[colorName].top) /
       dimensions[colorName].height
     ).toPrecision(1);
-    colours["cyan"].style.transform = `translate(${x * 4 - 52}%, -${y * 4 +
+    colours["cyan"].style.transform = `translate(-${48 - x * 4}%, -${y * 4 +
       48}%)`;
-    colours["magenta"].style.transform = `translate(${x * 4 - 48}%, -${y * 4 -
-      48}%)`;
-    colours["yellow"].style.transform = `translate(-${x * 4 + 48}%, -${y * 4 +
+    colours["magenta"].style.transform = `translate(-${46 + x * 4}%, -${52 -
+      y * 4}%)`;
+    colours["yellow"].style.transform = `translate(-${46 + x * 4}%, -${y * 4 +
       48}%)`;
   });
 };
