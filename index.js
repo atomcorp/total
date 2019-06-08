@@ -1,7 +1,7 @@
-import { getStyleSheet, getCssClass } from "./js/utils.js";
-import { initRange, initText } from "./js/handlers.js";
+import { initRange, initText, initMotion } from "./js/handlers.js";
 
 (function() {
   initRange();
   initText();
+  initMotion();
 })();

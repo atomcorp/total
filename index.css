@@ -28,17 +28,17 @@ body {
 
 .cyan {
   color: #00adee;
-  transform: translate(calc(-51%), calc(-46%));
+  transform: translate(-51%, -46%);
 }
 
 .magenta {
   color: #ec008c;
-  transform: translate(calc(-50%), calc(-52%));
+  transform: translate(-50%, -52%);
 }
 
 .yellow {
   color: #fef100;
-  transform: translate(calc(-48%), calc(-48%));
+  transform: translate(-48%, -48%);
 }
 
 /* tools */
@@ -51,5 +51,10 @@ body {
   justify-content: space-between;
 }
 
+.size {
+  padding: 20px;
+}
+
 .input {
+  padding: 20px;
 }

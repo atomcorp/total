@@ -7,11 +7,11 @@ export function getStyleSheet(title) {
   }
 }
 
-export function getCssClass(styles, selector) {
+export const getCssClass = styles => selector => {
   for (let i = 0; i < styles.length; i++) {
     let style = styles[i];
     if (style.selectorText == selector) {
       return style;
     }
   }
-}
+};
