@@ -64,24 +64,23 @@ export const initMotion = () => {
   const totals = returnTotalsHof();
   const colours = colorsModule();
   const dimensions = colours.resetDimensions(totals);
+  const container = document.querySelector(".container");
   // add event listener for each total
-  totals.forEach(total => {
-    total.addEventListener("mousemove", e => {
-      const colorName = e.target.dataset.color;
-      const x = (
-        (e.clientX - dimensions[colorName].left) /
-        dimensions[colorName].width
-      ).toPrecision(1);
-      const y = (
-        (e.clientY - dimensions[colorName].top) /
-        dimensions[colorName].height
-      ).toPrecision(1);
-      colours["cyan"].style.transform = `translate(${x * 4 - 52}%, ${y * 4 -
-        52}%)`;
-      colours["magenta"].style.transform = `translate(${x * 4 - 48}%, -${y * 4 -
-        48}%)`;
-      colours["yellow"].style.transform = `translate(-${x * 4 + 48}%, -${y * 4 +
-        48}%)`;
-    });
+  container.addEventListener("mousemove", e => {
+    const colorName = "cyan";
+    const x = (
+      (e.clientX - dimensions[colorName].left) /
+      dimensions[colorName].width
+    ).toPrecision(1);
+    const y = (
+      (e.clientY - dimensions[colorName].top) /
+      dimensions[colorName].height
+    ).toPrecision(1);
+    colours["cyan"].style.transform = `translate(${x * 4 - 52}%, -${y * 4 +
+      48}%)`;
+    colours["magenta"].style.transform = `translate(${x * 4 - 48}%, -${y * 4 -
+      48}%)`;
+    colours["yellow"].style.transform = `translate(-${x * 4 + 48}%, -${y * 4 +
+      48}%)`;
   });
 };

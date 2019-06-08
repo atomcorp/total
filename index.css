@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  cursor: grabbing;
 }
 
 .container {
@@ -11,7 +13,6 @@ body {
 /* text */
 
 .text {
-  font-family: "Montserrat", sans-serif;
   position: relative;
   height: 100%;
   width: 100%;
@@ -49,6 +50,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .size {
@@ -57,4 +59,13 @@ body {
 
 .input {
   padding: 20px;
+}
+
+.credit {
+  padding: 20px;
+}
+
+.credit a {
+  color: black;
+  text-decoration: none;
 }
