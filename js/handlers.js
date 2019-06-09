@@ -33,6 +33,8 @@ export const initRange = () => {
 export const initText = () => {
   const input = document.getElementById("text");
   const totals = returnTotalsHof();
+  input.focus();
+  input.setSelectionRange(input.value.length, input.value.length);
   input.addEventListener("input", e => {
     totals.forEach(total => {
       total.innerText = e.target.value;
