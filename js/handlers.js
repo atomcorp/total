@@ -53,26 +53,31 @@ const colorsModule = () => {
   };
 };
 
+const eventHandler = (containerDimensions, colours) => e => {
+  const { clientX, clientY } = e.type === "mousemove" ? e : e.touches.item(0);
+  const x = (
+    (clientX - containerDimensions.left) /
+    containerDimensions.width
+  ).toPrecision(3);
+  const y = (
+    (clientY - containerDimensions.top) /
+    containerDimensions.height
+  ).toPrecision(3);
+  colours["cyan"].style.transform = `translate(-${50 - x * 4}%, -${y * 4 +
+    48}%)`;
+  colours["magenta"].style.transform = `translate(-${48 + x * 4}%, -${52 -
+    y * 4}%)`;
+  colours["yellow"].style.transform = `translate(-${46 + x * 4}%, -${48 +
+    y * 8}%)`;
+};
+
 export const initMotion = () => {
   const totals = returnTotalsHof();
   const colours = colorsModule();
   const container = document.querySelector(".container");
   const containerDimensions = container.getBoundingClientRect();
+  const eventHandlerWithProps = eventHandler(containerDimensions, colours);
   // add event listener for each total
-  container.addEventListener("mousemove", e => {
-    const x = (
-      (e.clientX - containerDimensions.left) /
-      containerDimensions.width
-    ).toPrecision(3);
-    const y = (
-      (e.clientY - containerDimensions.top) /
-      containerDimensions.height
-    ).toPrecision(3);
-    colours["cyan"].style.transform = `translate(-${50 - x * 4}%, -${y * 4 +
-      48}%)`;
-    colours["magenta"].style.transform = `translate(-${48 + x * 4}%, -${52 -
-      y * 4}%)`;
-    colours["yellow"].style.transform = `translate(-${46 + x * 4}%, -${48 +
-      y * 8}%)`;
-  });
+  container.addEventListener("mousemove", eventHandlerWithProps);
+  container.addEventListener("touchmove", eventHandlerWithProps);
 };
