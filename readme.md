@@ -1,6 +1,6 @@
 # TOTALATOTOTALATOT
 
-This is a css/js site remake of the album cover for New Order's Total.
+This is a css/js remake of the album cover for New Order's Total.
 
 Things you can do with this include:
 
