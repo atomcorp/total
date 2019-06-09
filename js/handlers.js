@@ -61,11 +61,11 @@ export const initMotion = () => {
     const x = (
       (e.clientX - containerDimensions.left) /
       containerDimensions.width
-    ).toPrecision(1);
+    ).toPrecision(3);
     const y = (
       (e.clientY - containerDimensions.top) /
       containerDimensions.height
-    ).toPrecision(1);
+    ).toPrecision(3);
     colours["cyan"].style.transform = `translate(-${50 - x * 4}%, -${y * 4 +
       48}%)`;
     colours["magenta"].style.transform = `translate(-${48 + x * 4}%, -${52 -
